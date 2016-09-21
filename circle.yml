@@ -6,12 +6,14 @@ dependencies:
   override:
     - docker info
     - docker build -t embrasure/srcclr .
+    
 test:
   override:
     - echo "Add unit tests eventually!"
+
 deployment:
   hub:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-- docker push embrasure/srcclr
+      - docker push embrasure/srcclr
