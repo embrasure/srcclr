@@ -42,5 +42,7 @@ If you wish for this alias to persist on reboot, you can append this line to you
 ## Environment Variables:
 
 You will want to create a file to hold your environment variables so you don't have to pass them in on the command line on every execution.  In the examples above, we've named that file "srcclr.env".  The following two variables must be set:
+
 GITHUBTOKEN -  Must be set to your personal github token you setup for sourceclear.
+
 SRCCLRTOKEN - Must be set to your sourceclear API token.  Note that is not the activation token, it's the actual authorized token for the API.
