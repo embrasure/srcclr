@@ -14,13 +14,13 @@ ADD	docker-entrypoint.sh /home/app/
 
 WORKDIR	/home/app
 
-RUN	curl -O https://download.srcclr.com/srcclr-latest.tgz && \
+RUN	curl -JLO https://download.srcclr.com/srcclr-$(curl -sf https://download.srcclr.com/LATEST_VERSION)-linux.tgz && \
 	tar -xzf srcclr-*.tgz && rm srcclr-*.tgz && mv srcclr-* srcclr && \
 	chown -R app /home/app && \
 	chmod 600 /home/app/.srcclr/agent.yml && \
 	chmod 700 /home/app/docker-entrypoint.sh
 
-USER	app
+USER app
 
 ENTRYPOINT ["/home/app/docker-entrypoint.sh"]
 
