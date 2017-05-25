@@ -16,13 +16,17 @@ It's slightly opinionated in that it assumes your repo is at github.com.
 
 For ease of use, it is recommended that you configure an alias for the one or more of the following commands:
 
-`$ alias srcclr='docker run -it --rm --env-file srcclr.env embrasure/srcclr'`
-`$ alias srcclr-s='docker run -d --env-file srcclr.env embrasure/srcclr server'`
+```shell
+$ alias srcclr='docker run -it --rm --env-file srcclr.env embrasure/srcclr'
+$ alias srcclr-s='docker run -d --env-file srcclr.env embrasure/srcclr server'
+```
 
 If you wish for this alias to persist on reboot, you can append this line to your `~/.bashrc` (or similiar file):
 
-`$ alias srcclr >> ~/.bashrc`
-`$ alias srcclr-s >> ~/.bashrc`
+```shell
+$ alias srcclr >> ~/.bashrc
+$ alias srcclr-s >> ~/.bashrc
+```
 
 ## Usage
 
